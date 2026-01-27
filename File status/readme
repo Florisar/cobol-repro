@@ -1,1 +1,47 @@
+# COBOL – Gestion des fichiers avec FILE STATUS
+
+## 📌 Objectif du projet
+
+Ce projet a pour but d’apprendre et de démontrer l’utilisation du **FILE STATUS en COBOL**,  
+une fonctionnalité essentielle en environnement professionnel (banque, assurance, administration).
+
+Le programme simule la gestion d’un fichier client au format CSV avec :
+- création du fichier
+- écriture sécurisée
+- lecture contrôlée
+- gestion des erreurs via FILE STATUS
+
+---
+
+## 🧠 Pourquoi FILE STATUS est important
+
+En entreprise, un programme COBOL **ne doit jamais échouer silencieusement**.
+
+`FILE STATUS` permet :
+- de savoir si un fichier existe
+- de détecter une erreur d’ouverture
+- de contrôler les erreurs d’écriture ou de lecture
+- de gérer la fin de fichier proprement
+
+👉 C’est une **bonne pratique obligatoire** dans les traitements batch.
+
+---
+
+## 📂 Fonctionnalités
+
+- 📄 Création d’un fichier `clients.csv` s’il n’existe pas
+- ✍️ Écriture de lignes clients
+- 📖 Lecture séquentielle du fichier
+- 🚨 Gestion des erreurs avec codes FILE STATUS
+- 🧪 Affichage des messages de contrôle
+
+---
+
+## 🧾 Exemple de FILE STATUS utilisé
+
+```cobol
+SELECT CLIENT-FILE
+   ASSIGN TO "clients.csv"
+   ORGANIZATION IS LINE SEQUENTIAL
+   FILE STATUS IS WS-FS-CLIENT.
 
